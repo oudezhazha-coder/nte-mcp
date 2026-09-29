@@ -1,0 +1,39 @@
+{
+  "name": "nte-mcp",
+  "version": "0.2.0",
+  "description": "MCP Server for Neverness to Everness (异环) - 异环游戏数据查询",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "nte-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "bridge": "node dist/bridge/server.js",
+    "bridge:dev": "tsx src/bridge/server.ts",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "init-data": "tsx scripts/init-data.ts"
+  },
+  "keywords": [
+    "mcp",
+    "nte",
+    "异环",
+    "neverness-to-everness",
+    "qq-bot"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "cheerio": "^1.0.0",
+    "node-fetch": "^3.3.2",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.18.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
